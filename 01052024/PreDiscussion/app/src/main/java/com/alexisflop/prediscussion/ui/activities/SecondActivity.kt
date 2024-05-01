@@ -11,7 +11,7 @@ class SecondActivity: ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent{
             PreDiscussionTheme {
-                SecondScreen()
+                SecondScreen(index = intent.getIntExtra("itemIndex", 2))
             }
         }
     }

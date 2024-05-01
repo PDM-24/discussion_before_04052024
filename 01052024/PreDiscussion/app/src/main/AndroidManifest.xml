@@ -28,7 +28,6 @@
             android:name=".ui.activities.SecondActivity"
             android:exported="true">
 
-
         </activity>
     </application>
 

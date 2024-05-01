@@ -9,14 +9,14 @@ import com.alexisflop.prediscussion.ui.components.FirstComponent
 import com.alexisflop.prediscussion.ui.components.SecondComponent
 
 @Composable
-fun SecondScreen(){
+fun SecondScreen(index: Int){
     Column {
-        SecondComponent(modifier = Modifier.weight(0.5f))
+        SecondComponent(modifier = Modifier.weight(0.5f), index)
     }
 }
 
 @Preview
 @Composable
 private fun SecondScreenPreview(){
-    SecondScreen()
+    SecondScreen(index = 0)
 }

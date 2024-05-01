@@ -21,7 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.alexisflop.prediscussion.data.myList
 
 @Composable
-fun SecondComponent(modifier: Modifier = Modifier/*, onClick: ()-> Unit*/) {
+fun SecondComponent(modifier: Modifier = Modifier/*, onClick: ()-> Unit*/, index: Int) {
 
     /*val myState by remember {
         mutableStateOf(true)
@@ -41,7 +41,8 @@ fun SecondComponent(modifier: Modifier = Modifier/*, onClick: ()-> Unit*/) {
     //var myString: String = "Hola"
 
     Column(modifier = modifier) {
-        Box(
+        Text(text = myList.value[index], color = Color.Black)
+        /*Box(
             modifier = Modifier
                 .weight(0.5f)
                 .fillMaxWidth()
@@ -71,7 +72,7 @@ fun SecondComponent(modifier: Modifier = Modifier/*, onClick: ()-> Unit*/) {
             //Log.i("LAST STATUS", myString)
         }, modifier = Modifier.weight(0.3f)) {
             Text(text = "Navigate to other activity")
-        }
+        }*/
         /*LazyColumn(modifier = Modifier.weight(1f).fillMaxWidth()) {
             itemsIndexed(_myList.value){index, item ->
                 Text(text = item, color = Color.White)
@@ -84,5 +85,5 @@ fun SecondComponent(modifier: Modifier = Modifier/*, onClick: ()-> Unit*/) {
 @Preview(showSystemUi = false)
 @Composable
 private fun SecondComponentPreview() {
-    SecondComponent()
+    SecondComponent(index = 0)
 }
